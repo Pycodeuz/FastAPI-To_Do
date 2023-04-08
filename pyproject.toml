@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "fastapi-to-do"
+version = "0.1.0"
+description = ""
+authors = ["javokhir <inboxjavohir@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_to_do"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.92.0"
+uvicorn = "^0.20.0"
+jinja2 = "^3.1.2"
+sqlalchemy = "^2.0.4"
+psycopg2-binary = "^2.9.5"
+python-multipart = "^0.0.6"
+bcrypt = "^4.0.1"
+python-jose = "^3.3.0"
+pydantic = {extras = ["email"], version = "^1.10.5"}
+faker = "^18.3.1"
+dotenv = "^0.0.5"
+fastapi-login = "^1.8.3"
+load-dotenv = "^0.1.0"
+passlib = "^1.7.4"
+celery = "^5.2.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

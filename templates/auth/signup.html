@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+						initial-scale=1.0">
+    <title>GeeksforGeeks</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style.css') }}">
+    <style>
+        .log-reg {
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            margin-left: 40%;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 20%;
+            margin-top: 10px;
+            background: orange;
+            font-style: italic;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1 class="heading">GeeksforGeeks</h1>
+    <h3 class="title">Sliding Login & Registration Form</h3>
+</header>
+
+<!-- container div -->
+<div class="container">
+
+    <!-- upper button section to select
+        the login or signup form -->
+
+
+        <a href="{{ url_for('login') }}">
+            <button class="log-reg">Login</button>
+        </a>
+        <a href="{{ url_for('register') }}">
+            <button class="log-reg">Signup</button>
+        </a>
+
+
+    <!-- Form section that contains the
+        login and the signup form -->
+    <div class="form-section">
+
+        <!-- login form -->
+        <!-- signup form -->
+        <form method="post" action="{{ url_for ('register') }}">
+            <div class="signup-box">
+                <input type="text"
+                       class="name ele"
+                       placeholder="Enter your name" name="name">
+                <input type="email" name="email"
+                       class="email ele"
+                       placeholder="youremail@email.com">
+                <input type="password" name="password"
+                       class="password ele"
+                       placeholder="password">
+                <input type="password" name="confirm_password"
+                       class="password ele"
+                       placeholder="Confirm password">
+
+                <button class="clkbtn">Register</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script src="{{ url_for('static', path='index.js') }}"></script>
+</body>
+
+</html>
+
+
+{#src="{{ url_for('static', path='vendors/overlayscrollbars/OverlayScrollbars.min.js') }}"#}
